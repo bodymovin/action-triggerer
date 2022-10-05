@@ -13,7 +13,9 @@ async function run() {
       owner: 'bodymovin',
       repo: 'test',
       event_type: 'trigger-test',
-      client_payload: {},
+      client_payload: {
+        passed: true,
+      },
     })
   } catch (error) {
     console.log('RUN ERROR: ', error);
