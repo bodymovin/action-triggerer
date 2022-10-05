@@ -18,9 +18,6 @@ jobs:
     env:
       GOOGLE_CLOUD_STORAGE: ${{ secrets.GOOGLE_CLOUD_STORAGE }}
       GOPATH: ${{ github.workspace }}
-    defaults:
-      run:
-        working-directory: ./images
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 16.x
