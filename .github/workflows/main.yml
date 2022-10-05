@@ -26,5 +26,8 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
     - run: npm ci
-    - run: echo 'test1'
-    - run: echo 'test2'
+    - run: echo 'PLAYER::'
+    - run: echo 'LOTTIE WEB'
+      if: ${{ github.event && github.event.client_payload.player == 'lottie-web' }}
+    - run: echo 'SKOTTIE'
+      if: ${{ github.event && github.event.client_payload.player == 'skottie' }}
